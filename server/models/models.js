@@ -5,7 +5,7 @@ const User = sequelize.define('user', {
     id: {type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true},
     email: {type: DataTypes.STRING, unique: true},
     password: {type: DataTypes.INTEGER},
-    rolde: {type: DataTypes.STRING, defaultValue: 'user'}
+    role: {type: DataTypes.STRING, defaultValue: 'user'}
 });
 
 const Tracked = sequelize.define('tracked', {
@@ -21,7 +21,6 @@ const Achivment = sequelize.define('achivment', {
     name: {type: DataTypes.STRING, unique: true, allowNull: false},
     img: {type: DataTypes.STRING, allowNull: false},
     description: {type: DataTypes.STRING, allowNull: false},
-    get: {type: DataTypes.STRING, allowNull: false},
     category: {type: DataTypes.STRING, allowNull: false},
     reward: {type: DataTypes.STRING, allowNull: false},
     rating: {type: DataTypes.INTEGER, defaultValue: 0},
